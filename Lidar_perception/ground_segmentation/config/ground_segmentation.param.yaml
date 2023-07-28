@@ -1,0 +1,32 @@
+/**:
+  ros__parameters:
+    additional_lidars: []
+    ransac_input_topics: []
+    use_single_frame_filter: False
+    use_time_series_filter: True
+
+    common_crop_box_filter:
+      parameters:
+        min_x: -50.0
+        max_x: 100.0
+        min_y: -50.0
+        max_y: 50.0
+        max_z: 2.5  # recommended 2.5 for non elevation_grid_mode
+        min_z: -2.5 # recommended 0.0 for non elevation_grid_mode
+        negative: False
+
+    common_ground_filter:
+      plugin: "ground_segmentation::RANSACGroundFilterComponent"
+      parameters:
+        input_topic: "/carla/ego_vehicle/lidar_front"
+        output_topic: "/perception/obstacle_segmentation/pointcloud"
+        base_frame: “base_link”
+        max_iterations: 1000
+        min_trial: 5000
+        min_points: 1000
+        outlier_threshold: 0.01
+        plane_slope_threshold: 10.0
+        voxel_size_x: 0.04
+        voxel_size_y: 0.04
+        voxel_size_z: 0.04
+        height_threshold: 0.01

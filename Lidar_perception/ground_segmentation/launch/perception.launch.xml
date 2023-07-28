@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+    <group>
+        <include file="$(find-pkg-share ground_segmentation)/launch/composition.launch.py">
+            <arg name="base_frame" value="lidar_link"/>
+        </include>
+    </group>
+  <!-- Rviz -->
+  <arg name="rviz" default="true"/>
+  <node pkg="rviz2" exec="rviz2" name="rviz2" output="screen" args=" $(find-pkg-share ground_segmentation)/rviz/perception.rivz" if="$(var rviz)"/>
+</launch>
