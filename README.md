@@ -3,7 +3,7 @@
 
 #### 项目结构：
 
-本项目参照autoware的结构，每个功能包就是一个小的模块包括：地面滤除（ground_segmentation）、欧式聚类（euclidean_cluster）、目标追踪（multi_object_tracker）。每个功能包生成对应的组件，最后通过launch文件添加相应的组件到组件容器中，以此实现动态的加载若干的组件。
+本项目参照autoware的结构，每个功能包就是一个小的模块包括：地面滤除（ground_segmentation）、欧式聚类（euclidean_cluster）、目标追踪（multi_object_tracker）。每个功能包生成对应的组件，最后通过launch文件添加相应的组件到组件容器中，以此实现动态的加载若干的节点组件。
 
 
 
