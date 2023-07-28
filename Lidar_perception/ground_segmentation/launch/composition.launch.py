@@ -45,7 +45,7 @@ class GroundSegmentationPipeline:
         components = []
         components.append(
             ComposableNode(
-                package="lidar_perception",
+                package="ground_segmentation",
                 plugin=self.ground_segmentation_param["common_ground_filter"]["plugin"],
                 name="common_ground_filter",
                 parameters=[
