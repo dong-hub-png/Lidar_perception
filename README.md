@@ -1,4 +1,5 @@
-**Note:**这个项目是基于ROS2的激光雷达感知。激光雷达感知的基本流程为：地面滤除、目标检测、目标追踪。目前只实现地面滤除这一部分，代码是参照autoware的ransac_ground_filter_nodelet.cpp，后续会实现多种地面滤除算法（ray_ground_filter、scan_ground_filter以及linefit）。此外目标检测后面会先做个简单实现就采用欧式聚类的方法来做，后续会去做基于深度学习的方法（centerpoint、pointpillars），代码部分基本上参照autoware；目标追踪这部分还没想好参照autoware去做还是apollo。这个项目的目标就是实现一个完整的激光雷达感知模块。
+#### Note:
+这个项目是基于ROS2的激光雷达感知。激光雷达感知的基本流程为：地面滤除、目标检测、目标追踪。目前只实现地面滤除这一部分，代码是参照autoware的ransac_ground_filter_nodelet.cpp，后续会实现多种地面滤除算法（ray_ground_filter、scan_ground_filter以及linefit）。此外目标检测后面会先做个简单实现就采用欧式聚类的方法来做，后续会去做基于深度学习的方法（centerpoint、pointpillars），代码部分基本上参照autoware；目标追踪这部分还没想好参照autoware去做还是apollo。这个项目的目标就是实现一个完整的激光雷达感知模块。
 
 #### 项目结构：
 
